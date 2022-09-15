@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+       <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+        <script src="js/script_2.js"></script>
+    </head>
+    
+            <!-- Inicio del Navbar >
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+              </ul>
+              <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form>
+            </div>
+            < Fin del Navbar >
+        <nav -->
+   
+            <!-- Inicio del Container -->
+        <div class="container mt-2">
+            
+        <h1>Formulario de Registro de Estudiantes</h1>
+        <a href="ClienteController"> Click Aquí </a>
+        
+        
+            <!-- Inicio del Formulario -->
+        <form method="POST" id="form" name="form" action="NewServlet">
+            <div class="for m-group">
+              <label for="codigo">Código de alumno</label>
+              <input class="form-control" type="text" placeholder="Ingrese su código" name="codigo" id="codigo">
+            </div>
+            <div class="form-group">
+            <div class="row">
+            <div class="col">
+              <label for="nombre">Nombre del Alumno</label>  
+              <input type="text" class="form-control" placeholder="Ingresar su nombre" name="nombre" id="nombre">
+            </div>
+            <div class="col">
+              <label for="apellido">Apellido del Alumno</label>  
+              <input type="text" class="form-control" placeholder="Ingresar sus apellidos" name="apellido" id="apellido">
+            </div>
+            </div>
+            </div>
+            <div class="form-group">
+              <label for="correo">Correo del Alumno</label>
+              <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="name@gmail.com" name="correo" id="correo">
+              <small id="emailHelp" class="form-text text-muted">Nunca compartiremos tu correo electrónico con nadie más.s.</small>
+            </div>
+            <!-- div class="form-group">
+              <label for="exampleInputPassword1">Contraseña</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Ingrese la contraseña" name="pass">
+            </div -->
+            <div class="form-group">
+              <label for="direccion">Dirección</label>
+              <input class="form-control" type="text" placeholder="Ingresar su dirección" name="direccion" id="direccion">
+            </div>
+            <div class="form-group">
+              <label for="telefono">Teléfono</label>
+              <input class="form-control" type="text" placeholder="Ingresar su número de teléfono" name="telefono" id="telefono">
+            </div>
+          
+            <div class="form-group has-feedback">
+              <input type="button" value="CAPTURAR" onclick="capturarDatos()" class="submit-button btn btn-default" id="botonEnviar">
+               
+            </div>
+           <button type="submit" class="btn btn-primary">Guardar</button>
+            <button type="button" onclick="enviarFormularioOpcion2()" class="btn btn-success">Guardar con JS</button>
+             <button type="button" class="btn btn-danger">Cancelar</button>
+            
+            <!-- Fin del Formulario -->
+        </form>
+            <!-- Fin del Container -->
+        </div>
+        
+        <div class="p-3 bd-highlight">
+            <div class="container" id="container2">
+                <table class="table table-striped table-hover">
+                    <thead class="table-dark">
+                        <tr>
+                            <td>Codigo de Estudiante</td>
+                            <td>Nombre del Estudiante</td>
+                            <td>Apellido del Estudiante</td>
+                            <td>Correo Institucional</td>
+                            <td>Dirección</td>
+                            <td>Telefono</td>
+                            </tr>
+                    </thead>
+                    <tbody id="bodyTable">
+
+                    </tbody>                     
+                </table>
+            </div>
+        </div>
+    
+</html>
+    
